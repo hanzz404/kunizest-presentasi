@@ -251,6 +251,30 @@ section {
   color: var(--color-orange);
 }
 
+.mt-4 {
+  margin-top: 1.5rem;
+}
+.penjelasan-ilmiah {
+  background: rgba(255, 193, 7, 0.1);
+  padding: 1.5rem;
+  border-left: 4px solid var(--color-orange);
+  border-radius: 0 15px 15px 0;
+  margin-top: 1.5rem;
+}
+.penjelasan-ilmiah h4 {
+  color: var(--color-brown);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.1rem;
+}
+.penjelasan-ilmiah p {
+  font-size: 0.95rem;
+  margin-bottom: 0;
+  color: var(--color-text-dark);
+}
+
 /* 4. Keunggulan (Cards) */
 .grid-cards {
   display: grid;
@@ -353,6 +377,45 @@ section {
 .timeline-content h3 {
   color: var(--color-orange);
   margin-bottom: 10px;
+}
+
+.proses-container {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.proses-img {
+  flex: 1;
+}
+
+.proses-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px; /* Ini yang membuat setiap sudut foto lengkung/rounded */
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+/* Penyesuaian layout timeline agar rapi di sebelah gambar */
+.proses .timeline {
+  flex: 1;
+  margin: 0;
+  max-width: 100%;
+  padding-left: 30px;
+}
+.proses .timeline::before {
+  left: 0;
+}
+.proses .timeline-item {
+  width: 100%;
+  padding: 20px 0 20px 40px;
+  left: 0 !important;
+}
+.proses .timeline-icon {
+  left: -20px !important;
 }
 
 /* 6. Detail Produk */
@@ -521,6 +584,15 @@ footer {
   .contact-container {
     flex-direction: column;
     gap: 2rem;
+  }
+  .proses-container {
+    flex-direction: column;
+  }
+
+  .proses-img img {
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
   }
 }
 
