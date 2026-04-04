@@ -738,3 +738,57 @@ body,
     color 0.4s ease,
     border-color 0.3s ease;
 }
+
+/* --- WHATSAPP FLOATING BUTTON --- */
+.wa-floating {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25d366; /* Warna hijau resmi WhatsApp */
+  color: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  animation: pulse-wa 2s infinite;
+}
+
+.wa-floating:hover {
+  background-color: #128c7e;
+  color: #fff;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+  /* Menghentikan animasi saat disentuh mouse agar nyaman diklik */
+  animation: none;
+}
+
+/* Animasi denyut (pulse) agar tombol terlihat hidup */
+@keyframes pulse-wa {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+/* --- RESPONSIF UNTUK WHATSAPP FLOATING DI HP --- */
+@media (max-width: 768px) {
+  .wa-floating {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
