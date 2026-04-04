@@ -10,7 +10,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // 2. Mobile Hamburger Menu Toggle
+  // 2. Dark Mode Toggle Logic
+  const darkModeToggle = document.getElementById("darkModeToggle");
+  const body = document.body;
+  const darkModeIcon = darkModeToggle.querySelector("i");
+
+  // Cek apakah user sebelumnya sudah mengaktifkan dark mode
+  if (localStorage.getItem("darkMode") === "enabled") {
+    body.classList.add("dark-mode");
+    darkModeIcon.classList.replace("fa-moon", "fa-sun"); // Ganti icon ke matahari
+  }
+
+  // Event listener saat tombol diklik
+  darkModeToggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+
+    // Cek status setelah diklik dan simpan ke localStorage
+    if (body.classList.contains("dark-mode")) {
+      localStorage.setItem("darkMode", "enabled");
+      darkModeIcon.classList.replace("fa-moon", "fa-sun");
+    } else {
+      localStorage.setItem("darkMode", "disabled");
+      darkModeIcon.classList.replace("fa-sun", "fa-moon");
+    }
+  });
+
+  // 3. Mobile Hamburger Menu Toggle
   const hamburger = document.querySelector(".hamburger");
   const navLinks = document.querySelector(".nav-links");
   const navItems = document.querySelectorAll(".nav-links li a");
@@ -39,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // 3. Scroll Reveal Animation via Intersection Observer
+  // 4. Scroll Reveal Animation via Intersection Observer
   const animateElements = document.querySelectorAll(".animate");
 
   const observerOptions = {
