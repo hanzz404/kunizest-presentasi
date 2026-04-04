@@ -510,7 +510,7 @@ footer {
 }
 
 .footer-logo span {
-  color: var(--color-yellow);
+  color: var(--color-orange);
 }
 
 .footer-links {
@@ -649,4 +649,92 @@ footer {
   .timeline-item:nth-child(even) .timeline-icon {
     left: 11px;
   }
+}
+
+/* --- LAYOUT NAV ACTIONS (TOGGLE & HAMBURGER) --- */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.dark-mode-toggle {
+  font-size: 1.4rem;
+  color: var(--color-brown);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  color: var(--color-orange);
+}
+
+/* --- TEMA DARK MODE --- */
+body.dark-mode {
+  /* Mengganti variabel warna utama ke tema gelap */
+  --color-bg-light: #121212;
+  --color-white: #1e1e1e; /* Background untuk card & navbar */
+  --color-text-dark: #f0f0f0;
+  --color-text-muted: #b0b0b0;
+  --color-brown: #e1c50e; /* Warna coklat diubah jadi kuning agar kontras */
+
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+}
+
+/* Penyesuaian elemen spesifik saat dark mode aktif */
+body.dark-mode .nav-links a {
+  color: var(--color-text-dark);
+}
+body.dark-mode .nav-links.active {
+  background: var(--color-white);
+}
+body.dark-mode .dark-mode-toggle,
+body.dark-mode .hamburger {
+  color: var(--color-text-dark);
+}
+body.dark-mode .card,
+body.dark-mode .timeline-content {
+  background: var(--color-white);
+  box-shadow: 0 5px 15px rgba(255, 255, 255, 0.05);
+}
+body.dark-mode .input-group input,
+body.dark-mode .input-group textarea {
+  background-color: #2a2a2a;
+  color: var(--color-text-dark);
+  border-color: #444;
+}
+body.dark-mode .penjelasan-ilmiah p {
+  color: var(--color-text-dark);
+}
+
+/* --- TRANSISI SMOOTH UNTUK DARK MODE --- */
+body,
+.nav-links a,
+.dark-mode-toggle,
+.hamburger,
+.penjelasan-ilmiah p {
+  /* Mengatur kecepatan perubahan warna background dan teks selama 0.4 detik */
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease;
+}
+
+/* Khusus card dan timeline, kita gabungkan dengan efek hover yang sudah ada sebelumnya */
+.card,
+.timeline-content {
+  transition:
+    background-color 0.7s ease,
+    color 0.4s ease,
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* Efek transisi untuk form input */
+.input-group input,
+.input-group textarea {
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    border-color 0.3s ease;
 }
