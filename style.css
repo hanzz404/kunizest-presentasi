@@ -792,3 +792,72 @@ body,
     right: 20px;
   }
 }
+
+/* --- HALAMAN ARTIKEL --- */
+.artikel-page {
+    padding-top: 120px; /* Jarak untuk navbar */
+    min-height: 100vh;
+}
+
+.artikel-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.artikel-judul {
+    font-size: 2.5rem;
+    color: var(--color-brown);
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+.artikel-meta {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.artikel-meta i {
+    color: var(--color-orange);
+}
+
+.artikel-cover {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.artikel-body h3 {
+    color: var(--color-brown);
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.artikel-body p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
+}
+
+.komentar-section {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 2px dashed #ddd;
+}
+
+/* Responsif untuk artikel */
+@media (max-width: 768px) {
+    .artikel-container { padding: 1.5rem; }
+    .artikel-judul { font-size: 1.8rem; }
+    .artikel-cover { height: 250px; }
+}
