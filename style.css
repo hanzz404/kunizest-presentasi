@@ -986,3 +986,22 @@ body.dark-mode .manfaat-box {
 body.dark-mode .manfaat-box ul li i {
   color: #2ecc71; /* Ikon centang menjadi hijau terang */
 }
+
+/* --- ANIMASI MUNCUL OTOMATIS UNTUK ARTIKEL --- */
+.muncul-otomatis {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fade-in-up 0.8s ease forwards;
+}
+
+/* Kunci animasi pergerakannya */
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
