@@ -1005,3 +1005,28 @@ body.dark-mode .manfaat-box ul li i {
         transform: translateY(0);
     }
 }
+
+/* --- STYLE UNTUK VIDEO LOKAL (MENDUKUNG VERTIKAL & HORIZONTAL) --- */
+.video-container {
+  width: 100%;
+  max-width: 400px; /* Batas lebar agar video vertikal tidak terlalu besar di laptop */
+  margin: 2rem auto; /* Membuat posisi video berada pas di tengah */
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Bayangan yang lebih estetik */
+  overflow: hidden;
+  background-color: #000; /* Latar hitam untuk estetika */
+  display: flex;
+  justify-content: center;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto; /* Biarkan tinggi menyesuaikan video aslinya */
+  display: block;
+  outline: none; /* Menghilangkan garis biru saat diklik */
+}
+
+/* --- DARK MODE UNTUK VIDEO --- */
+body.dark-mode .video-container {
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.05);
+}
