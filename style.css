@@ -1030,3 +1030,23 @@ body.dark-mode .manfaat-box ul li i {
 body.dark-mode .video-container {
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.05);
 }
+
+/* =========================================
+   GAYA UNTUK LOGO NAVBAR
+========================================= */
+.nav-brand {
+  display: flex;
+  align-items: center; /* Membuat logo dan teks rata tengah sejajar */
+  gap: 12px; /* Jarak spasi antara gambar logo dan tulisan Pawon Gelafid */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem; /* Sesuaikan ukuran teks jika perlu */
+  color: var(--text-dark);
+}
+
+.nav-logo {
+  height: 45px; /* Mengatur tinggi logo menjadi kecil dan pas untuk navbar */
+  width: auto; /* Membiarkan lebarnya menyesuaikan agar tidak gepeng */
+  object-fit: contain;
+}
+
