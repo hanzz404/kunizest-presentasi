@@ -1035,18 +1035,21 @@ body.dark-mode .video-container {
    GAYA UNTUK LOGO NAVBAR
 ========================================= */
 .nav-brand {
-  display: flex;
-  align-items: center; /* Membuat logo dan teks rata tengah sejajar */
-  gap: 12px; /* Jarak spasi antara gambar logo dan tulisan Pawon Gelafid */
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.5rem; /* Sesuaikan ukuran teks jika perlu */
-  color: var(--text-dark);
+    display: flex;
+    align-items: center; /* Membuat logo dan teks rata tengah sejajar */
+    gap: 12px; /* Jarak antara logo dan tulisan */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem; 
+    color: var(--color-text-dark); /* Menggunakan variabel warna agar support dark mode */
 }
 
 .nav-logo {
-  height: 45px; /* Mengatur tinggi logo menjadi kecil dan pas untuk navbar */
-  width: auto; /* Membiarkan lebarnya menyesuaikan agar tidak gepeng */
-  object-fit: contain;
+    height: 45px; /* Kunci tingginya */
+    width: 45px; /* Kunci lebarnya agar sama (persegi) */
+    object-fit: cover; /* Memastikan gambar memenuhi kotak 45x45 tanpa gepeng */
+    border-radius: 50%; /* Trik estetik: Membuat foto kotak menjadi lingkaran rapi! */
+    display: block;
 }
+
 
