@@ -124,14 +124,30 @@ section {
   align-items: center;
 }
 
-.logo {
+/* Style Logo dan Teks KuniZest Bersebelahan */
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.nav-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-title {
   font-size: 1.8rem;
   font-weight: 700;
   color: var(--color-brown);
 }
 
-.logo span {
-  color: var(--color-orange);
+.nav-title span {
+  color: var(
+    --color-orange
+  ); /* Mengembalikan efek 2 warna pada tulisan KuniZest */
 }
 
 .nav-links {
@@ -989,21 +1005,21 @@ body.dark-mode .manfaat-box ul li i {
 
 /* --- ANIMASI MUNCUL OTOMATIS UNTUK ARTIKEL --- */
 .muncul-otomatis {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fade-in-up 0.8s ease forwards;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fade-in-up 0.8s ease forwards;
 }
 
 /* Kunci animasi pergerakannya */
 @keyframes fade-in-up {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* --- STYLE UNTUK VIDEO LOKAL (MENDUKUNG VERTIKAL & HORIZONTAL) --- */
@@ -1030,26 +1046,3 @@ body.dark-mode .manfaat-box ul li i {
 body.dark-mode .video-container {
   box-shadow: 0 8px 25px rgba(255, 255, 255, 0.05);
 }
-
-/* =========================================
-   GAYA UNTUK LOGO NAVBAR
-========================================= */
-.nav-brand {
-    display: flex;
-    align-items: center; /* Membuat logo dan teks rata tengah sejajar */
-    gap: 12px; /* Jarak antara logo dan tulisan */
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.5rem; 
-    color: var(--color-text-dark); /* Menggunakan variabel warna agar support dark mode */
-}
-
-.nav-logo {
-    height: 45px; /* Kunci tingginya */
-    width: 45px; /* Kunci lebarnya agar sama (persegi) */
-    object-fit: cover; /* Memastikan gambar memenuhi kotak 45x45 tanpa gepeng */
-    border-radius: 50%; /* Trik estetik: Membuat foto kotak menjadi lingkaran rapi! */
-    display: block;
-}
-
-
